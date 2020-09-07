@@ -28,7 +28,7 @@ public class BookCabController {
       notes = "Book a cab with required type and number of passengers"
   )
   @RequestMapping(
-      value = "/bookCab",
+      value = "/bookACab",
       method = RequestMethod.POST,
       consumes = {MediaType.APPLICATION_JSON_VALUE},
       produces = {MediaType.APPLICATION_JSON_VALUE})
