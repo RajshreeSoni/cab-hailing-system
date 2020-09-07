@@ -1,0 +1,19 @@
+# Logging & Tomcat
+server:
+  port: 8080
+  async:
+    default:
+      max-threads: 4
+      min-threads: 1
+    ticketFulfillment:
+      max-threads: 4
+      min-threads: 1
+    amenityService:
+      max-threads: 4
+      min-threads: 1
+  ssl:
+    enabled: false
+
+# Additional Config
+test:
+  helloMsg: "Hello dev"

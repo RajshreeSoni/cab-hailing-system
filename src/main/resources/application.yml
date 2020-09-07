@@ -1,0 +1,46 @@
+---
+# Spring Configuration
+spring:
+  application:
+    name: @project.name@
+  main:
+    allow-bean-definition-overriding: true
+
+
+# Spring Actuator Endpoints
+# Additional Config
+test:
+  helloMsg: "Hello dev"
+
+server:
+  tomcat:
+    basedir: ${application.home}
+    max-threads: 1
+    access-log-enabled: true
+    access-log-pattern: "%t lbip=%h identd=%l user=%u status=%s method=%m url=%U bytes=%b duration=%D"
+  ssl:
+    key-store: classpath:certs/https/keystoretest.jks
+    keyAlias: myCert
+    enabled: false
+  port: 8443
+
+# Swagger Documentation
+swagger:
+  service:
+    version: "1.0.0"
+    title: ${spring.application.name}
+    description: "A service that provides APIs for ..."
+    termsPath: ""
+    contact:
+      name: "Cab Hailing System"
+      email: "rajshreesoni1@gmail.com"
+      url: ""
+    licencePath: "#"
+    licenceType: ""
+
+# Additional Config
+  test:
+    helloMsg: "Hello there"
+management:
+  endpoints:
+    enabled-by-default: true
