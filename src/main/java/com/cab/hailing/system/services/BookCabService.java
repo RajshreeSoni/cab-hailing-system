@@ -40,7 +40,7 @@ public class BookCabService {
     trip.setRider(bookCabRequest.getRider());
     trip.setDestination(bookCabRequest.getDestination());
     trip.setSource(String.valueOf(bookCabRequest.getRider().getLocation()));
-    trip.setTripStatus(TripStatus.NOTSTARTED);
+    trip.setTripStatus(TripStatus.NOT_STARTED);
     // Mocking it right now, ideally it should be get from ETA api
     trip.setTripDuration("30 mins");
     trip.setTripStartTime(LocalDateTime.now());

@@ -4,6 +4,7 @@ import java.time.LocalDateTime;
 
 public class Trip {
 
+  private String tripId;
   private Driver driver;
   private Rider rider;
   private String source;
@@ -12,6 +13,14 @@ public class Trip {
   private LocalDateTime tripStartTime;
   private LocalDateTime tripEndTime;
   private TripStatus tripStatus;
+
+  public String getTripId() {
+    return tripId;
+  }
+
+  public void setTripId(String tripId) {
+    this.tripId = tripId;
+  }
 
   public Driver getDriver() {
     return driver;
